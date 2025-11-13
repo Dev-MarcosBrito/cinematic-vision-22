@@ -1,5 +1,7 @@
+import { Content } from '@/types';
+
 // Complete content for the portfolio in PT and EN
-export const content = {
+export const content: Content = {
   pt: {
     // Navigation
     nav: {
@@ -233,7 +235,6 @@ export const content = {
   },
   
   en: {
-    // Navigation
     nav: {
       story: "Story",
       about: "About",
@@ -242,7 +243,6 @@ export const content = {
       contact: "Contact"
     },
     
-    // Hero Section
     hero: {
       headline: "Turning moments into narratives that move",
       subtitle: "Art direction, filming and cinematic editing for brands that tell unforgettable stories",
@@ -251,7 +251,6 @@ export const content = {
       microcopy: "↓ Discover how we elevate your vision"
     },
     
-    // Story Section
     story: {
       title: "The journey behind the lens",
       text: [
@@ -262,7 +261,6 @@ export const content = {
       microcopy: "From curiosity to craft. From craft to passion."
     },
     
-    // About Section
     about: {
       title: "Cinema applied to communication",
       mission: {
@@ -280,7 +278,6 @@ export const content = {
       microcopy: "When technique meets sensitivity, the extraordinary is born."
     },
     
-    // Services Section
     services: {
       title: "From concept to delivery — cinema in every detail",
       items: [
@@ -319,7 +316,6 @@ export const content = {
       microcopy: "Each service, a possibility to create something unforgettable."
     },
     
-    // Portfolio Section
     portfolio: {
       title: "Where vision becomes reality",
       intro: "A selection of projects that define my vision. Every frame tells a story.",
@@ -358,7 +354,6 @@ export const content = {
       cta: "View all work"
     },
     
-    // Partners Section
     partners: {
       title: "Brands that trusted our vision",
       intro: "When talent meets opportunity, partnerships become projects that make history.",
@@ -372,7 +367,6 @@ export const content = {
       ]
     },
     
-    // Testimonials Section
     testimonials: {
       title: "What they say about working with me",
       items: [
@@ -395,7 +389,6 @@ export const content = {
       microcopy: "Relationships that become long-term partnerships."
     },
     
-    // Philosophy Section
     philosophy: {
       title: "The philosophy behind every frame",
       intro: [
@@ -429,7 +422,6 @@ export const content = {
       microcopy: "Cinema is choice. And I choose what touches."
     },
     
-    // Contact Section
     contact: {
       title: "Let's create something memorable together",
       intro: "Every great production starts with a conversation. Tell me your vision, your challenge, your dream — and let's transform it into cinema.",
@@ -457,7 +449,6 @@ export const content = {
       microcopy: "Your story deserves to be told like cinema. Shall we begin?"
     },
     
-    // Footer
     footer: {
       copyright: "© 2025 Professional VideoMaker — Creative Director",
       rights: "All rights reserved."
