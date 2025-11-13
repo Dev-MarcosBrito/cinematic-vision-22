@@ -1,7 +1,15 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, RefObject } from 'react';
 
-export const useScrollReveal = (options = {}) => {
-  const ref = useRef(null);
+interface UseScrollRevealOptions {
+  threshold?: number;
+  rootMargin?: string;
+  once?: boolean;
+}
+
+export const useScrollReveal = (
+  options: UseScrollRevealOptions = {}
+): [RefObject<HTMLDivElement>, boolean] => {
+  const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -9,9 +17,8 @@ export const useScrollReveal = (options = {}) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          // Optionally unobserve after revealing once
-          if (options.once !== false) {
-            observer.unobserve(entry.target);
+          if (options.once !== false && ref.current) {
+            observer.unobserve(ref.current);
           }
         } else if (options.once === false) {
           setIsVisible(false);
